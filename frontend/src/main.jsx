@@ -5,12 +5,14 @@ import App from './App.jsx'
 import './assets/styles/bootstrap.custom.css'
 import './assets/styles/index.css'
 import HomeScreen from './Screens/HomeScreen.jsx'
+import ProductScreen from './Screens/ProductScreen.jsx'
 // import 'bootstrap/dist/css/bootstrap.min.css'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App/>}>
       <Route index={true} path='/' element={<HomeScreen/>}></Route>
+      <Route  path='/product/:id' element={<ProductScreen/>}></Route>
     </Route>
   )
 )
