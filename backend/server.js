@@ -11,8 +11,8 @@ connectDB();
 const app = express();
 
 app.get('/api/products', (req, res) => {
-    res.send('API is running...');
-  });
+  res.json(products)
+});
 
 app.listen(port, () =>
   console.log(`Server running in ${process.env.NODE_ENV} mode on port ${port}`)
